@@ -1,5 +1,7 @@
 alias ll='ls -lha'
 alias workspace='cd ~/Workspace'
+alias dazzine='cd ~/Workspace/dazzine'
+alias guruin='cd ~/Workspace/guruin'
 alias fuckgfw='proxychains4'
 alias prof_vim_startup='vim --startuptime /tmp/startup.log +q && vim /tmp/startup.log'
 alias aria2_start="aria2c --conf-path='/Users/luotao/.aria2/aria2.conf' -D"
