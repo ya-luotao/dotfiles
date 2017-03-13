@@ -1,9 +1,5 @@
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" => let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'ap/vim-buftabline'
@@ -26,7 +22,7 @@ Plugin 'leafgarland/typescript-vim'
 " Plugin 'SirVer/ultisnips'
 " Plugin 'honza/vim-snippets'
 
-" Plugin 'wakatime/vim-wakatime'
+Plugin 'wakatime/vim-wakatime'
 
 " Vim syntax highlighting for Vue components
 Plugin 'posva/vim-vue'
