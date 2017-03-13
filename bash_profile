@@ -15,17 +15,9 @@ if [ -f ~/.aliases ]; then
   source ~/.aliases
 fi
 
-
-# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# source ~/.profile
-
-# source ~/.bin/tmuxinator.bash
-# export PATH="/usr/local/opt/openssl/bin:$PATH"
-
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
+if [ -f ~/.bin/tmuxinator.bash ]; then
+  source ~/.bin/tmuxinator.bash
+fi
 
 export NVM_DIR="/Users/luotao/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-# export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
