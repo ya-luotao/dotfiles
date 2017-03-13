@@ -11,14 +11,10 @@ export PROXYCHAINS_QUIET_MODE=1
 
 GIT_PROMTP_THEMT=Solarized
 
-alias ll='ls -lha'
-alias workspace='cd ~/Workspace'
-alias fuckgfw='proxychains4'
-alias prof_vim_startup='vim --startuptime /tmp/startup.log +q && vim /tmp/startup.log'
-alias aria2_start="aria2c --conf-path='/Users/luotao/.aria2/aria2.conf' -D"
-alias mux='tmuxiantor'
-alias install_vim_plugins='vim +PluginInstall +qall'
-alias rikka="git add . && git commit -m 'up' && git push"
+if [ -f ~/.aliases ]; then
+  source ~/.aliases
+fi
+
 
 # if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
