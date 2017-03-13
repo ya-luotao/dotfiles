@@ -9,6 +9,7 @@ Plugin 'mbbill/undotree'
 Plugin 'rking/ag.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive' " Git Wrapper
+Plugin 'christoomey/vim-run-interactive'
 " Plugin 'wincent/command-t'
 
 Plugin 'tpope/vim-surround'
@@ -27,8 +28,6 @@ Plugin 'wakatime/vim-wakatime'
 " Vim syntax highlighting for Vue components
 Plugin 'posva/vim-vue'
 
-" => 10 useful vim plugins for Ruby/Ruby on Rails
-" https://masteruby.github.io/productivity-booster/2014/05/02/vim-plugins-for-ruby.html
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 Plugin 'vim-ruby/vim-ruby'
@@ -48,4 +47,4 @@ Plugin 'vim-airline/vim-airline-themes'
 " => ColorScheme
 Plugin 'altercation/vim-colors-solarized'
 
-call vundle#end()            " required
+call vundle#end()
