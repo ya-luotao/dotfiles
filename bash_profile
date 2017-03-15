@@ -11,7 +11,7 @@ export PROXYCHAINS_QUIET_MODE=1
 
 GIT_PROMTP_THEMT=Solarized
 
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 if [ -f ~/.aliases ]; then
   source ~/.aliases
