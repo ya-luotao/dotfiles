@@ -1,5 +1,6 @@
 alias ll='ls -lha'
 alias workspace='cd ~/Workspace'
+alias notes='cd ~/Workspace/Notes'
 alias dazzine='cd ~/Workspace/dazzine'
 alias guruin='cd ~/Workspace/guruin'
 alias dotfiles='cd ~/Workspace/dotfiles'
@@ -8,4 +9,27 @@ alias prof_vim_startup='vim --startuptime /tmp/startup.log +q && vim /tmp/startu
 alias aria2_start="aria2c --conf-path='/Users/luotao/.aria2/aria2.conf' -D"
 alias mux='tmuxiantor'
 alias install_vim_plugins='vim +PluginInstall +qall'
-alias rikka="git add . && git commit -m 'up' && git push"
+alias sidekiq_pool="bundle exec sidekiq -C config/sidekiq.yml RAILS_ENV=production"
+
+alias deploy_dazzine_assets=''
+alias deploy_dazzine_migration=''
+alias deploy_dazzine_migrate=''
+alias deploy_dazzine_internal=''
+alias deploy_dazzine_worker=''
+alias deploy_dazzine_web=''
+
+alias deploy_dazzine_beta_assets=''
+alias deploy_dazzine_beta_migration=''
+alias deploy_dazzine_beta_migrate=''
+alias deploy_dazzine_beta_internal=''
+alias deploy_dazzine_beta_worker=''
+alias deploy_dazzine_beta_web=''
+
+alias deploy_sociana_assets=''
+alias deploy_sociana_migration=''
+alias deploy_sociana_migrate=''
+alias deploy_sociana_internal=''
+alias deploy_sociana_worker=''
+alias deploy_sociana_web=''
+
+alias gitlog='git log --format="%Cgreen%h%Creset %C(yellow)%aN%Creset: %s" --no-merges'

@@ -8,6 +8,7 @@ export CLICOLOR=1
 
 export EDITOR=vim
 export PROXYCHAINS_QUIET_MODE=1
+export ANSIBLE_HOSTS=/Users/luotao/ansible_hosts
 
 GIT_PROMTP_THEMT=Solarized
 
@@ -21,5 +22,14 @@ if [ -f ~/.bin/tmuxinator.bash ]; then
   source ~/.bin/tmuxinator.bash
 fi
 
-export NVM_DIR="/Users/luotao/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+source ~/Workspace/bash-wakatime/bash-wakatime.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/luotao/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/Users/luotao/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/luotao/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/luotao/Downloads/google-cloud-sdk/completion.bash.inc'; fi
