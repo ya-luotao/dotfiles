@@ -20,3 +20,9 @@ rcup:
 lsrc -d $HOME/Workspace/dotfiles
 rcup -v -d $HOME/Workspace/Dotfiles
 ```
+
+## Add
+
+```
+mkrc ~/.tmuxinator/proj.yml
+```
