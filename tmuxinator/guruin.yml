@@ -45,33 +45,52 @@ root: ~/Workspace/guruin/Web
 windows:
   - be:
       root: ~/Workspace/guruin/Web/Web
-      layout: main-vertical
+      layout: 5ff9,234x57,0,0[234x48,0,0,2,234x8,0,49{117x8,0,49,4,116x8,118,49,7}]
+      # pre:
+      #   - tmux select-windows -t be
       panes:
         - code:
-          - tmux select-window -t be && tmux select-pane -t 0 && tmux resize-pane -R 90 && vi
+          # - tmux select-pane -t 0
+          # - tmux resize-pane -R 90
+          - vi
         - server:
-          - tmux select-window -t be && tmux select-pane -t 1 && tmux resize-pane -U 40 && spring stop && bin/rails s
+          # - tmux select-pane -t 1
+          # - tmux resize-pane -U 30
+          - spring stop
+          - bin/rails s
         - git:
           - git status
   - fe:
       root: ~/Workspace/guruin/Web/Web/nui
-      layout: main-vertical
+      layout: 5ff9,234x57,0,0[234x48,0,0,2,234x8,0,49{117x8,0,49,4,116x8,118,49,7}]
+      # pre:
+      #   - tmux select-window -t fe
       panes:
         - code:
-          - tmux select-window -t fe && tmux select-pane -t 0 && tmux resize-pane -R 90
+          # - tmux select-pane -t 0
+          # - tmux resize-pane -R 90
           - vi
         - grunt:
-          - tmux select-window -t fe && tmux select-pane -t 1 && tmux resize-pane -U 40 && grunt
+          # - tmux select-pane -t 1
+          # - tmux resize-pane -U 30
+          - grunt
         - git:
           - git status
-  # - internal:
-  #     root: ~/Workspace/guruin/Web/Internal
-  #     layout: main-vertical
-  #     panes:
-  #       - code:
-  #         - tmux select-window -t internal && tmux select-pane -t 0 && tmux resize-pane -R 90 && vi
-  #       - server:
-  #         - tmux select-window -t internal && tmux select-pane -t 1 && tmux resize-pane -U 40 && sprint stop && bin/rails s
-  #       - git:
-  #         - git status
+  - internal:
+      root: ~/Workspace/guruin/Web/Internal
+      layout: 5ff9,234x57,0,0[234x48,0,0,2,234x8,0,49{117x8,0,49,4,116x8,118,49,7}]
+      # pre:
+      #   - tmux select-window -t internal
+      panes:
+        - code:
+          # - tmux select-pane -t 0
+          # - tmux resize-pane -R 90
+          - vi
+        - server:
+          # - tmux select-pane -t 1
+          # - tmux resize-pane -U 40
+          - sprint stop
+          - bin/rails s
+        - git:
+          - git status
 
