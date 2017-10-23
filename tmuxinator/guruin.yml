@@ -25,7 +25,13 @@ windows:
           - grunt
         - git:
           - git status
-  - internal:
+  - db:
+      root: ~/Workspace/guruin/Web/Migration
+      layout: a1c6,234x56,0,0{117x56,0,0,9,116x56,118,0,10}
+      panes:
+        - ls
+        - cd db/migrate/ && ls
+  - admin:
       root: ~/Workspace/guruin/Web/Internal
       layout: 5ff9,234x57,0,0[234x48,0,0,2,234x8,0,49{117x8,0,49,4,116x8,118,49,7}]
       panes:
@@ -36,5 +42,11 @@ windows:
           - bin/rails s
         - git:
           - git status
-
-# TODO: add deploy window
+  - deploy:
+      root: ~/Workspace/guruin/Web/Web
+      layout: a1c6,234x56,0,0{117x56,0,0,9,116x56,118,0,10}
+      panes:
+        - code:
+          - vi config/environments/production.rb
+        - script:
+          - cd ~/Workspace/guruin/scripts
