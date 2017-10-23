@@ -1,6 +1,0 @@
-{
-  "^j" = "moveBackward",
-  "^l" = "moveForward",
-  "^i" = "moveUp",
-  "^k" = "moveDown"
-}
