@@ -48,3 +48,4 @@ nnoremap <leader>f :NERDTreeFind<CR>
 nnoremap <leader>ri :RunInInteractiveShell<space>
 nnoremap <leader>tag :TagbarToggle<CR>
 nnoremap <leader>undo :UndotreeToggle<CR>
+nnoremap <leader>p :FZF<CR>

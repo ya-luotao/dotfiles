@@ -1,4 +1,5 @@
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
@@ -7,7 +8,8 @@ Plugin 'ap/vim-buftabline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mbbill/undotree'
 Plugin 'rking/ag.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-fugitive' " Git Wrapper
 Plugin 'christoomey/vim-run-interactive'
 " Plugin 'wincent/command-t'
