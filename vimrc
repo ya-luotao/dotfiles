@@ -28,7 +28,8 @@ set background=dark
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 syntax enable
-colorscheme solarized
+colorscheme nord
+" colorscheme solarized
 
 let g:airline_theme='bubblegum'
 
