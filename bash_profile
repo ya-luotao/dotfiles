@@ -9,10 +9,9 @@ export CLICOLOR=1
 export EDITOR=vim
 export PROXYCHAINS_QUIET_MODE=1
 export ANSIBLE_HOSTS=/Users/luotao/ansible_hosts
+export PATH=$PATH:/Users/luotao/terraform
 
-GIT_PROMTP_THEMT=Solarized
-
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# GIT_PROMTP_THEMT=Solarized
 
 if [ -f ~/.aliases ]; then
   source ~/.aliases
@@ -22,7 +21,7 @@ if [ -f ~/.bin/tmuxinator.bash ]; then
   source ~/.bin/tmuxinator.bash
 fi
 
-source ~/Workspace/bash-wakatime/bash-wakatime.sh
+# source ~/Workspace/bash-wakatime/bash-wakatime.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
@@ -33,3 +32,9 @@ if [ -f '/Users/luotao/Downloads/google-cloud-sdk/path.bash.inc' ]; then source 
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/luotao/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/luotao/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+eval "$(rbenv init -)"
