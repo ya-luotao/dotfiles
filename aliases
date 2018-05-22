@@ -8,3 +8,5 @@ alias mux='tmuxiantor'
 alias install_vim_plugins='vim +PluginInstall +qall'
 alias sidekiq_pool="bundle exec sidekiq -C config/sidekiq.yml RAILS_ENV=production"
 alias gitlog='git log --format="%Cgreen%h%Creset %C(yellow)%aN%Creset: %s" --no-merges'
+alias vim='nvim'
+alias vi='nvim'
