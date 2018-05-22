@@ -18,9 +18,15 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
-if filereadable(expand("~/.config/nvim/nvimrc.bundles"))
-  source ~/.config/nvim/nvimrc.bundles
+set rtp+=~/.config/nvim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
+call vundle#begin()
+
+if filereadable(expand("~/.shared_cfg/vimrc.bundles"))
+  source ~/.shared_cfg/vimrc.bundles
 end
+
+call vundle#end()
 
 filetype plugin indent on
 
