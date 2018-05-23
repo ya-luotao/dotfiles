@@ -5,7 +5,7 @@ Plugin 'ap/vim-buftabline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mbbill/undotree'
 Plugin 'rking/ag.vim'
-" Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-fugitive' " Git Wrapper
 Plugin 'christoomey/vim-run-interactive'
