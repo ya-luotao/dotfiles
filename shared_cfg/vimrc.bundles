@@ -43,6 +43,9 @@ Plugin 'kchmck/vim-coffee-script'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'takac/vim-hardtime'
+" Plugin 'wikitopian/hardmode'
+Plugin 'wall2flower/hardmode'
 
 " => ColorScheme
 Plugin 'altercation/vim-colors-solarized'
