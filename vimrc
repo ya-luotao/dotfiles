@@ -54,7 +54,6 @@ let g:buftabline_numbers=1
 nnoremap <leader>a :Ag<space>
 nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
-nnoremap <leader>ri :RunInInteractiveShell<space>
 nnoremap <leader>tag :TagbarToggle<CR>
 nnoremap <leader>undo :UndotreeToggle<CR>
 nnoremap <leader>p :FZF<CR>
