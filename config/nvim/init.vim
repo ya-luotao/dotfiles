@@ -17,6 +17,7 @@ set relativenumber
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+set nohlsearch
 
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 set rtp+=/usr/local/opt/fzf

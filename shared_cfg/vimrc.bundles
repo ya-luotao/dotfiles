@@ -8,13 +8,13 @@ Plugin 'rking/ag.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-fugitive' " Git Wrapper
-Plugin 'christoomey/vim-run-interactive'
+" Plugin 'christoomey/vim-run-interactive'
 " Plugin 'wincent/command-t'
 
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary' " Comment stuff out. Usage: `gcc`, `gc`, `gcap`, `:g/TODO/Commentary`
 Plugin 'vim-scripts/Align' " Align Text, common usage: `:6,10Align =`
-Plugin 'vimwiki/vimwiki'
+" Plugin 'vimwiki/vimwiki'
 Plugin 'arcticicestudio/nord-vim'
 
 Plugin 'majutsushi/tagbar'
@@ -26,12 +26,12 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'wakatime/vim-wakatime'
 
 " Vim syntax highlighting for Vue components
-Plugin 'posva/vim-vue'
+" Plugin 'posva/vim-vue'
 
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-bundler'
+" Plugin 'tpope/vim-bundler'
 " Plugin 'tpope/vim-fugitive'
 Plugin 'ervandew/supertab'
 " Plugin 'tpope/vim-cucumber'
