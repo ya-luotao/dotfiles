@@ -41,7 +41,10 @@ let g:airline_theme='bubblegum'
 
 let g:tagbar_sort=0
 
-let g:hardmode = 1
+" https://stackoverflow.com/questions/53657545/nerdtree-g-before-folder-and-file-names-osx-terminal-vim
+let g:NERDTreeNodeDelimiter = "\u00a0"
+
+" let g:hardmode = 1
 
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
