@@ -36,7 +36,14 @@ if [ -f '/Users/luotao/Downloads/google-cloud-sdk/completion.bash.inc' ]; then s
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# export LDFLAGS="-L/usr/local/opt/openssl/lib"
+# export CPPFLAGS="-I/usr/local/opt/openssl/include"
+# export PATH="/usr/local/opt/openssl/bin:$PATH"
+# export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
+eval "$(rbenv init -)"
