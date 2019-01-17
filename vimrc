@@ -1,3 +1,9 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 let mapleader = ","
 
 set backspace=2
@@ -18,24 +24,17 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
-set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=/usr/local/opt/fzf
-call vundle#begin()
+
 
 if filereadable(expand("~/.shared_cfg/vimrc.bundles"))
   source ~/.shared_cfg/vimrc.bundles
 end
 
-call vundle#end()
-
-filetype plugin indent on
-
 set background=dark
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
-syntax enable
 colorscheme nord
-" colorscheme solarized
 
 let g:airline_theme='bubblegum'
 

@@ -1,51 +1,55 @@
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
-Plugin 'ap/vim-buftabline'
-" Plugin 'qpkorr/vim-bufkill'
-Plugin 'scrooloose/nerdtree'
-Plugin 'mbbill/undotree'
-Plugin 'rking/ag.vim'
-" Plugin 'junegunn/fzf.vim'
-Plugin 'tpope/vim-fugitive' " Git Wrapper
-" Plugin 'christoomey/vim-run-interactive'
-" Plugin 'wincent/command-t'
+Plug 'VundleVim/Vundle.vim'
 
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary' " Comment stuff out. Usage: `gcc`, `gc`, `gcap`, `:g/TODO/Commentary`
-Plugin 'vim-scripts/Align' " Align Text, common usage: `:6,10Align =`
-" Plugin 'vimwiki/vimwiki'
-Plugin 'arcticicestudio/nord-vim'
+Plug 'ap/vim-buftabline'
+" Plug 'qpkorr/vim-bufkill'
+Plug 'scrooloose/nerdtree'
+Plug 'mbbill/undotree'
+Plug 'rking/ag.vim'
+" Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive' " Git Wrapper
+" Plug 'christoomey/vim-run-interactive'
+" Plug 'wincent/command-t'
 
-Plugin 'majutsushi/tagbar'
-Plugin 'mattn/emmet-vim'
-Plugin 'leafgarland/typescript-vim'
-" Plugin 'SirVer/ultisnips'
-" Plugin 'honza/vim-snippets'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary' " Comment stuff out. Usage: `gcc`, `gc`, `gcap`, `:g/TODO/Commentary`
+Plug 'vim-scripts/Align' " Align Text, common usage: `:6,10Align =`
+" Plug 'vimwiki/vimwiki'
+Plug 'arcticicestudio/nord-vim'
 
-Plugin 'wakatime/vim-wakatime'
+Plug 'majutsushi/tagbar'
+Plug 'mattn/emmet-vim'
+Plug 'leafgarland/typescript-vim'
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
+
+Plug 'wakatime/vim-wakatime'
 
 " Vim syntax highlighting for Vue components
-" Plugin 'posva/vim-vue'
+" Plug 'posva/vim-vue'
 
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-endwise'
-Plugin 'vim-ruby/vim-ruby'
-" Plugin 'tpope/vim-bundler'
-" Plugin 'tpope/vim-fugitive'
-Plugin 'ervandew/supertab'
-" Plugin 'tpope/vim-cucumber'
-" Plugin 'tpope/vim-haml'
-Plugin 'slim-template/vim-slim'
-" Plugin 'skalnik/vim-vroom'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-endwise'
+Plug 'vim-ruby/vim-ruby'
+" Plug 'tpope/vim-bundler'
+" Plug 'tpope/vim-fugitive'
+Plug 'ervandew/supertab'
+" Plug 'tpope/vim-cucumber'
+" Plug 'tpope/vim-haml'
+Plug 'slim-template/vim-slim'
+" Plug 'skalnik/vim-vroom'
 
-Plugin 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script'
 
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-" Plugin 'takac/vim-hardtime'
-" Plugin 'wikitopian/hardmode'
-Plugin 'wall2flower/hardmode'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" Plug 'takac/vim-hardtime'
+" Plug 'wikitopian/hardmode'
+Plug 'wall2flower/hardmode'
 
 " => ColorScheme
-Plugin 'altercation/vim-colors-solarized'
-" Plugin 'danilo-augusto/vim-afterglow'
+Plug 'altercation/vim-colors-solarized'
+" Plug 'danilo-augusto/vim-afterglow'
+
+call plug#end()
