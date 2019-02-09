@@ -48,3 +48,4 @@ export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 # export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 eval "$(rbenv init -)"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
