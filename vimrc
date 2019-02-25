@@ -43,6 +43,9 @@ let g:tagbar_sort=0
 " https://stackoverflow.com/questions/53657545/nerdtree-g-before-folder-and-file-names-osx-terminal-vim
 let g:NERDTreeNodeDelimiter = "\u00a0"
 
+" let g:wakatime_PythonBinary = '/usr/bin/python'
+" let g:wakatime_PythonBinary = '/Users/luotao/.pyenv/shims/python'
+
 " let g:hardmode = 1
 
 au WinLeave * set nocursorline nocursorcolumn
