@@ -6,6 +6,9 @@ local hotkey = require "hs.hotkey"
 local hyper = {"alt"}
 local hyperShifted = {"cmd", "alt"}
 
+local source_config = os.getenv("HOME") .. "/Workspace/dotfiles/hammerspoon/init.lua"
+local source_config_absolute = hs.fs.pathToAbsolute(source_config)
+
 grid.MARGINX = 0
 grid.MARGINY = 0
 grid.GRIDHEIGHT = 13
@@ -152,5 +155,5 @@ function reload_config(files)
   hs.realod()
 end
 
-hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reload_config):start()
+hs.pathwatcher.new(source_config, reload_config):start()
 hs.alert.show("Config loaded.")
