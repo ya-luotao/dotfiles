@@ -145,3 +145,10 @@ hotkey.bind(hyperShifted, "L", function()
   f.h = max.h
   win:setFrame(f)
 end)
+
+function reload_config(files)
+  hs.realod()
+end
+
+hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reload_config):start()
+hs.alert.show("Config loaded.")
