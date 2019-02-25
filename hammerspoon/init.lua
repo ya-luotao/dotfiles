@@ -1,7 +1,32 @@
+local application = require "hs.application"
+local grid = require "hs.grid"
+local window = require "hs.window"
+local hotkey = require "hs.hotkey"
+
 local hyper = {"alt"}
 local hyperShifted = {"cmd", "alt"}
 
-hs.hotkey.bind(hyper, "Y", function()
+grid.MARGINX = 0
+grid.MARGINY = 0
+grid.GRIDHEIGHT = 13
+grid.GRIDWIDTH = 13
+
+hotkey.bind(hyperShifted, "o", function() application.launchOrFocus("OmniFocus") end)
+hotkey.bind(hyperShifted, "f", function() application.launchOrFocus("Finder") end)
+hotkey.bind(hyperShifted, "t", function() application.launchOrFocus("iTerm2") end)
+hotkey.bind(hyperShifted, "c", function() application.launchOrFocus("Google Chrome") end)
+
+-- hotkey.bind(hyper, "J", function() grid.adjustHeight(1) end)
+-- hotkey.bind(hyper, "K", function() grid.adjustHeight(-1) end)
+-- hotkey.bind(hyper, "H", function() grid.adjustWidth(1) end)
+-- hotkey.bind(hyper, "L", function() grid.adjustWidth(-1) end)
+
+hotkey.bind(hyper, "=", function() grid.adjustHeight(1) end)
+hotkey.bind(hyper, "-", function() grid.adjustHeight(-1) end)
+hotkey.bind(hyperShifted, "=", function() grid.adjustWidth(1) end)
+hotkey.bind(hyperShifted, "-", function() grid.adjustWidth(-1) end)
+
+hotkey.bind(hyper, "Y", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -10,7 +35,7 @@ hs.hotkey.bind(hyper, "Y", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind(hyper, "K", function()
+hotkey.bind(hyper, "K", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -18,7 +43,7 @@ hs.hotkey.bind(hyper, "K", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind(hyper, "U", function()
+hotkey.bind(hyper, "U", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -27,7 +52,7 @@ hs.hotkey.bind(hyper, "U", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind(hyper, "H", function()
+hotkey.bind(hyper, "H", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -35,7 +60,7 @@ hs.hotkey.bind(hyper, "H", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind(hyper, "L", function()
+hotkey.bind(hyper, "L", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -43,7 +68,7 @@ hs.hotkey.bind(hyper, "L", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind(hyper, "B", function()
+hotkey.bind(hyper, "B", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -52,7 +77,7 @@ hs.hotkey.bind(hyper, "B", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind(hyper, "J", function()
+hotkey.bind(hyper, "J", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -60,7 +85,7 @@ hs.hotkey.bind(hyper, "J", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind(hyper, "N", function()
+hotkey.bind(hyper, "N", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -69,7 +94,7 @@ hs.hotkey.bind(hyper, "N", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind(hyperShifted, "H", function()
+hotkey.bind(hyperShifted, "H", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -82,7 +107,7 @@ hs.hotkey.bind(hyperShifted, "H", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind(hyperShifted, "J", function()
+hotkey.bind(hyperShifted, "J", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -95,7 +120,7 @@ hs.hotkey.bind(hyperShifted, "J", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind(hyperShifted, "K", function()
+hotkey.bind(hyperShifted, "K", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -108,7 +133,7 @@ hs.hotkey.bind(hyperShifted, "K", function()
   win:setFrame(f)
 end)
 
-hs.hotkey.bind(hyperShifted, "L", function()
+hotkey.bind(hyperShifted, "L", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
