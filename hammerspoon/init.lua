@@ -11,6 +11,8 @@ grid.MARGINY = 0
 grid.GRIDHEIGHT = 13
 grid.GRIDWIDTH = 13
 
+window.animationDuration = 0
+
 hotkey.bind(hyperShifted, "o", function() application.launchOrFocus("OmniFocus") end)
 hotkey.bind(hyperShifted, "f", function() application.launchOrFocus("Finder") end)
 hotkey.bind(hyperShifted, "t", function() application.launchOrFocus("iTerm2") end)
