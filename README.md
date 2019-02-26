@@ -3,7 +3,7 @@
 ## Install
 
 ```
-git clone git@github.com:wall2flower/dotfiles ~/Workspace/dotfiles
+git clone git@github.com:luotaoruby/dotfiles ~/Workspace/dotfiles
 ```
 
 Install RCM:
@@ -21,19 +21,34 @@ lsrc -d $HOME/Workspace/dotfiles
 rcup -v -d $HOME/Workspace/Dotfiles
 ```
 
-## Add
+## Create new dotfile link
 
 ```
 mkrc ~/.tmuxinator/proj.yml
 ```
 
-## Configs
+### Configs
 
-1. tmux & tmuxinator
+1. Homebrew
 
-- prefix: `C-g`.
-- tmux require tmux 1.8 or later (except 2.5).
+```
+rm Brewfile && brew bundle dump # backup homebrew.
 
-2. Karaniner-Elements
+brew bundle # restore homebrew backup.
+```
 
-- map `C-h/j/k/l` to `left/down/up/right arrow`.
+2. tmux
+
+3. Vim
+
+4. Karabiner
+
+5. Hammerspoon
+
+6. Git
+
+7. RSpec
+
+8. RubyGems
+
+9. Bash
