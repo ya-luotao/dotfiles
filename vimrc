@@ -23,6 +23,7 @@ set relativenumber
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+set nojoinspaces
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
@@ -39,8 +40,6 @@ if filereadable(expand("~/.shared_cfg/vimrc.bundles"))
 end
 
 set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
 colorscheme nord
 
 let g:airline_theme='bubblegum'
@@ -63,6 +62,7 @@ set hidden
 let g:buftabline_show=1
 let g:buftabline_numbers=1
 
+nnoremap <leader><leader> <C-^>
 nnoremap <leader>a :Ag<space>
 nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>

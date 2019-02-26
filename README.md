@@ -36,18 +36,22 @@ mkrc ~/.tmuxinator/proj.yml
 tmux configuration:
 
 - Set prefix to `Ctrl+g`.
+- Improve color resolution.
 
 vim configuration:
 
 - Use vim-plug to manage plugins.
+- Use Ag instead of Grep when available.
+- Use Tagbar to view the tags of the current file and get an overview of its structure, map `<leader>tag` to `:TagbarToggle`.
 - Set `<leader>` to `,`.
+- Switch between the last two files with `<leader><leader>`.
 
 Shell aliases and scripts:
 
 - `ll` for `ls -lha`.
 - `mux` for `tmux`.
-- `path` for `echo $PATH | tr -s ":" "\n"`.
-- `gitlog` for `git log --format="%Cgreen%h%Creset %C(yellow)%aN%Creset: %s" --no-merges`.
+- `path` for `echo $PATH | tr -s ":" "\n"` to pretty print the path.
+- `gitlog` for `git log --format="%Cgreen%h%Creset %C(yellow)%aN%Creset: %s" --no-merges` to pretty print the git log.
 - `fuckgfw` for `proxychains4`.
 - `dotfiles` for `cd ~/Workspace/dotfiles`.
 - `workspace` for `cd ~/Workspace`.
