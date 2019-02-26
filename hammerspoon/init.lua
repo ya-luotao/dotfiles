@@ -1,20 +1,16 @@
 local application = require "hs.application"
+local pathwatcher = require "hs.pathwatcher"
 local grid = require "hs.grid"
 local window = require "hs.window"
 local hotkey = require "hs.hotkey"
+local alert = require "hs.alert"
 
 local vim_mode_prefix = {"ctrl"}
 
-local hyper = {"alt"}
-local hyperShifted = {"cmd", "alt"}
+local alt = {"alt"}
+local cmdalt = {"cmd", "alt"}
 
 local source_config = os.getenv("HOME") .. "/Workspace/dotfiles/hammerspoon/"
-local source_config_absolute = hs.fs.pathToAbsolute(source_config)
-
-grid.MARGINX = 0
-grid.MARGINY = 0
-grid.GRIDHEIGHT = 13
-grid.GRIDWIDTH = 13
 
 window.animationDuration = 0
 
@@ -23,45 +19,33 @@ window.animationDuration = 0
 vim_mode = hotkey.modal.new(vim_mode_prefix, "/")
 
 function vim_mode:entered()
-  hs.alert("Entered vim mode.")
+  alert("Entered vim mode.")
 end
 
 function vim_mode:exited()
-  hs.alert("Exited vim mode.")
+  alert("Exited vim mode.")
 end
 
 vim_mode:bind({}, "Q", function() vim_mode:exit() end)
-
-nested_mode = hotkey.modal.new({"ctrl"}, "W")
-
-function nested_mode:entered()
-  hs.alert("Entered nested model.")
-end
-
-function nested_mode:exited()
-  hs.alert("Exited nested model.")
-end
-
-nested_mode:bind({}, "escape", function() nested_mode:exit() end)
 -- Vim Mode.
 
 
-hotkey.bind(hyperShifted, "o", function() application.launchOrFocus("OmniFocus") end)
-hotkey.bind(hyperShifted, "f", function() application.launchOrFocus("Finder") end)
-hotkey.bind(hyperShifted, "t", function() application.launchOrFocus("iTerm2") end)
-hotkey.bind(hyperShifted, "c", function() application.launchOrFocus("Google Chrome") end)
+hotkey.bind(cmdalt, "o", function() application.launchOrFocus("OmniFocus") end)
+hotkey.bind(cmdalt, "f", function() application.launchOrFocus("Finder") end)
+hotkey.bind(cmdalt, "t", function() application.launchOrFocus("iTerm2") end)
+hotkey.bind(cmdalt, "c", function() application.launchOrFocus("Google Chrome") end)
 
--- hotkey.bind(hyper, "J", function() grid.adjustHeight(1) end)
--- hotkey.bind(hyper, "K", function() grid.adjustHeight(-1) end)
--- hotkey.bind(hyper, "H", function() grid.adjustWidth(1) end)
--- hotkey.bind(hyper, "L", function() grid.adjustWidth(-1) end)
+-- hotkey.bind(alt, "J", function() grid.adjustHeight(1) end)
+-- hotkey.bind(alt, "K", function() grid.adjustHeight(-1) end)
+-- hotkey.bind(alt, "H", function() grid.adjustWidth(1) end)
+-- hotkey.bind(alt, "L", function() grid.adjustWidth(-1) end)
 
-hotkey.bind(hyper, "=", function() grid.adjustHeight(1) end)
-hotkey.bind(hyper, "-", function() grid.adjustHeight(-1) end)
-hotkey.bind(hyperShifted, "=", function() grid.adjustWidth(1) end)
-hotkey.bind(hyperShifted, "-", function() grid.adjustWidth(-1) end)
+hotkey.bind(alt, "=", function() grid.adjustHeight(1) end)
+hotkey.bind(alt, "-", function() grid.adjustHeight(-1) end)
+hotkey.bind(cmdalt, "=", function() grid.adjustWidth(1) end)
+hotkey.bind(cmdalt, "-", function() grid.adjustWidth(-1) end)
 
-hotkey.bind(hyper, "Y", function()
+hotkey.bind(alt, "Y", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -70,7 +54,7 @@ hotkey.bind(hyper, "Y", function()
   win:setFrame(f)
 end)
 
-hotkey.bind(hyper, "K", function()
+hotkey.bind(alt, "K", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -78,7 +62,7 @@ hotkey.bind(hyper, "K", function()
   win:setFrame(f)
 end)
 
-hotkey.bind(hyper, "U", function()
+hotkey.bind(alt, "U", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -87,7 +71,7 @@ hotkey.bind(hyper, "U", function()
   win:setFrame(f)
 end)
 
-hotkey.bind(hyper, "H", function()
+hotkey.bind(alt, "H", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -95,7 +79,7 @@ hotkey.bind(hyper, "H", function()
   win:setFrame(f)
 end)
 
-hotkey.bind(hyper, "L", function()
+hotkey.bind(alt, "L", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -103,7 +87,7 @@ hotkey.bind(hyper, "L", function()
   win:setFrame(f)
 end)
 
-hotkey.bind(hyper, "B", function()
+hotkey.bind(alt, "B", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -112,7 +96,7 @@ hotkey.bind(hyper, "B", function()
   win:setFrame(f)
 end)
 
-hotkey.bind(hyper, "J", function()
+hotkey.bind(alt, "J", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -120,7 +104,7 @@ hotkey.bind(hyper, "J", function()
   win:setFrame(f)
 end)
 
-hotkey.bind(hyper, "N", function()
+hotkey.bind(alt, "N", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
 
@@ -129,7 +113,7 @@ hotkey.bind(hyper, "N", function()
   win:setFrame(f)
 end)
 
-hotkey.bind(hyperShifted, "H", function()
+hotkey.bind(cmdalt, "H", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -142,7 +126,7 @@ hotkey.bind(hyperShifted, "H", function()
   win:setFrame(f)
 end)
 
-hotkey.bind(hyperShifted, "J", function()
+hotkey.bind(cmdalt, "J", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -155,7 +139,7 @@ hotkey.bind(hyperShifted, "J", function()
   win:setFrame(f)
 end)
 
-hotkey.bind(hyperShifted, "K", function()
+hotkey.bind(cmdalt, "K", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -168,7 +152,7 @@ hotkey.bind(hyperShifted, "K", function()
   win:setFrame(f)
 end)
 
-hotkey.bind(hyperShifted, "L", function()
+hotkey.bind(cmdalt, "L", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -181,5 +165,5 @@ hotkey.bind(hyperShifted, "L", function()
   win:setFrame(f)
 end)
 
-hs.pathwatcher.new(source_config, hs.reload):start()
-hs.alert.show("Config loaded.")
+pathwatcher.new(source_config, hs.reload):start()
+alert.show("Config loaded.")
