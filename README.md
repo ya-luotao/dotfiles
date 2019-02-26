@@ -6,19 +6,23 @@
 git clone git@github.com:luotaoruby/dotfiles ~/Workspace/dotfiles
 ```
 
-Install RCM:
+Install rcm:
 
 ```
 brew tap thoughtbot/formulae
 brew install rcm
 ```
 
-rcup:
+Install the dotfiles:
 
 ```
+env RCRC=$HOME/Workspace/dotfiles/rcrc rcup
+```
 
-lsrc -d $HOME/Workspace/dotfiles
-rcup -v -d $HOME/Workspace/Dotfiles
+## Update
+
+```
+rcup
 ```
 
 ## Create new dotfile link
@@ -27,28 +31,22 @@ rcup -v -d $HOME/Workspace/Dotfiles
 mkrc ~/.tmuxinator/proj.yml
 ```
 
-### Configs
+## What's in it?
 
-1. Homebrew
+tmux configuration:
 
-```
-rm Brewfile && brew bundle dump # backup homebrew.
+- Set prefix to `Ctrl+g`.
 
-brew bundle # restore homebrew backup.
-```
+vim configuration:
 
-2. tmux
+- Use vim-plug to manage plugins.
+- Set `<leader>` to `,`.
 
-3. Vim
+Shell aliases and scripts:
 
-4. Karabiner
-
-5. Hammerspoon
-
-6. Git
-
-7. RSpec
-
-8. RubyGems
-
-9. Bash
+- `ll` for `ls -lha`.
+- `mux` for `tmux`.
+- `gitlog` for `git log --format="%Cgreen%h%Creset %C(yellow)%aN%Creset: %s" --no-merges`.
+- `fuckgfw` for `proxychains4`.
+- `dotfiles` for `cd ~/Workspace/dotfiles`.
+- `workspace` for `cd ~/Workspace`.
