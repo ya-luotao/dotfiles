@@ -46,6 +46,7 @@ Shell aliases and scripts:
 
 - `ll` for `ls -lha`.
 - `mux` for `tmux`.
+- `path` for `echo $PATH | tr -s ":" "\n"`.
 - `gitlog` for `git log --format="%Cgreen%h%Creset %C(yellow)%aN%Creset: %s" --no-merges`.
 - `fuckgfw` for `proxychains4`.
 - `dotfiles` for `cd ~/Workspace/dotfiles`.

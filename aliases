@@ -4,3 +4,6 @@ alias dotfiles='cd ~/Workspace/dotfiles'
 alias fuckgfw='proxychains4'
 alias mux='tmuxiantor'
 alias gitlog='git log --format="%Cgreen%h%Creset %C(yellow)%aN%Creset: %s" --no-merges'
+
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n"'
