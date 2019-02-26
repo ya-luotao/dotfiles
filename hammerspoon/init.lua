@@ -6,7 +6,7 @@ local hotkey = require "hs.hotkey"
 local hyper = {"alt"}
 local hyperShifted = {"cmd", "alt"}
 
-local source_config = os.getenv("HOME") .. "/Workspace/dotfiles/hammerspoon/init.lua"
+local source_config = os.getenv("HOME") .. "/Workspace/dotfiles/hammerspoon/"
 local source_config_absolute = hs.fs.pathToAbsolute(source_config)
 
 grid.MARGINX = 0
@@ -151,9 +151,5 @@ hotkey.bind(hyperShifted, "L", function()
   win:setFrame(f)
 end)
 
-function reload_config(files)
-  hs.realod()
-end
-
-hs.pathwatcher.new(source_config, reload_config):start()
+hs.pathwatcher.new(source_config, hs.reload):start()
 hs.alert.show("Config loaded.")
