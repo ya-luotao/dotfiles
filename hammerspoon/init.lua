@@ -3,6 +3,8 @@ local grid = require "hs.grid"
 local window = require "hs.window"
 local hotkey = require "hs.hotkey"
 
+local vim_mode_prefix = {"ctrl"}
+
 local hyper = {"alt"}
 local hyperShifted = {"cmd", "alt"}
 
@@ -15,6 +17,34 @@ grid.GRIDHEIGHT = 13
 grid.GRIDWIDTH = 13
 
 window.animationDuration = 0
+
+
+-- Vim Mode
+vim_mode = hotkey.modal.new(vim_mode_prefix, "/")
+
+function vim_mode:entered()
+  hs.alert("Entered vim mode.")
+end
+
+function vim_mode:exited()
+  hs.alert("Exited vim mode.")
+end
+
+vim_mode:bind({}, "Q", function() vim_mode:exit() end)
+
+nested_mode = hotkey.modal.new({"ctrl"}, "W")
+
+function nested_mode:entered()
+  hs.alert("Entered nested model.")
+end
+
+function nested_mode:exited()
+  hs.alert("Exited nested model.")
+end
+
+nested_mode:bind({}, "escape", function() nested_mode:exit() end)
+-- Vim Mode.
+
 
 hotkey.bind(hyperShifted, "o", function() application.launchOrFocus("OmniFocus") end)
 hotkey.bind(hyperShifted, "f", function() application.launchOrFocus("Finder") end)
