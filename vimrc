@@ -24,6 +24,13 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
+" Display extra whitespace
+set list listchars=tab:»·,trail:·,nbsp:·
+
 set rtp+=/usr/local/opt/fzf
 
 
