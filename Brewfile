@@ -1,22 +1,40 @@
 tap "homebrew/bundle"
+tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "thoughtbot/formulae"
+brew "autoconf"
+brew "automake"
 brew "bash-git-prompt"
+brew "libffi"
 brew "cmake"
+brew "ctags"
 brew "curl"
 brew "fzf"
+brew "gcc"
 brew "git"
+brew "libtool"
+brew "graphicsmagick"
 brew "htop"
+brew "xz"
+brew "imagemagick@6", link: true
 brew "openssl"
+brew "libyaml"
+brew "readline", link: true
+brew "sqlite"
 brew "mongodb", restart_service: true
-brew "mysql@5.7", restart_service: true
+brew "mysql@5.7", restart_service: true, link: true
 brew "node"
+brew "opencc"
+brew "poppler"
 brew "postgresql", restart_service: true
+brew "pyenv"
 brew "rbenv"
 brew "redis", restart_service: true
 brew "the_silver_searcher"
 brew "tig"
 brew "tmux"
+brew "v8@3.15", link: true
 brew "wget"
 brew "thoughtbot/formulae/rcm"
+cask "chromedriver"
