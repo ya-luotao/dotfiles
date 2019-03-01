@@ -3,6 +3,7 @@ alias workspace='cd ~/Workspace'
 alias dotfiles='cd ~/Workspace/dotfiles'
 alias fuckgfw='proxychains4'
 alias mux='tmuxiantor'
+alias mkdir='mkdir -p'
 alias gitlog='git log --format="%Cgreen%h%Creset %C(yellow)%aN%Creset: %s" --no-merges'
 
 # Pretty print the path
