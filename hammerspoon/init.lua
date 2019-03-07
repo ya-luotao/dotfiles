@@ -134,7 +134,7 @@ hotkey.bind(cmdalt, "J", function()
 
   f.x = 0
   f.y = max.h / 2
-  f.w = max.w
+  f.w = max.w / 2
   f.h = max.h / 2
   win:setFrame(f)
 end)
@@ -147,7 +147,7 @@ hotkey.bind(cmdalt, "K", function()
 
   f.x = 0
   f.y = 0
-  f.w = max.w
+  f.w = max.w / 2
   f.h = max.h / 2
   win:setFrame(f)
 end)
