@@ -1,9 +1,11 @@
 local application = require "hs.application"
 local pathwatcher = require "hs.pathwatcher"
-local grid = require "hs.grid"
+local eventtap = require "hs.eventtap"
+local spaces = require "hs._asm.undocumented.spaces"
 local window = require "hs.window"
 local hotkey = require "hs.hotkey"
 local alert = require "hs.alert"
+local grid = require "hs.grid"
 
 local vim_mode_prefix = {"ctrl"}
 
@@ -13,6 +15,11 @@ local cmdalt = {"cmd", "alt"}
 local source_config = os.getenv("HOME") .. "/Workspace/dotfiles/hammerspoon/"
 
 window.animationDuration = 0
+
+
+local etp = eventtap.new({eventtap.event.types.keyDown}, function(o)
+  local keyCode = o:getKeyCode()
+end):start()
 
 
 -- Vim Mode
