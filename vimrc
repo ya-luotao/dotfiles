@@ -69,3 +69,6 @@ nnoremap <leader>f :NERDTreeFind<CR>
 nnoremap <leader>tag :TagbarToggle<CR>
 nnoremap <leader>undo :UndotreeToggle<CR>
 nnoremap <leader>p :FZF<CR>
+
+nnoremap ; :
+nnoremap : ;
