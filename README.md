@@ -52,6 +52,5 @@ Shell aliases and scripts:
 - `mux` for `tmux`.
 - `path` for `echo $PATH | tr -s ":" "\n"` to pretty print the path.
 - `gitlog` for `git log --format="%Cgreen%h%Creset %C(yellow)%aN%Creset: %s" --no-merges` to pretty print the git log.
-- `fuckgfw` for `proxychains4`.
 - `dotfiles` for `cd ~/Workspace/dotfiles`.
 - `workspace` for `cd ~/Workspace`.
