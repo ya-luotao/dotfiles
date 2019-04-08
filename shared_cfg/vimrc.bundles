@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'ap/vim-buftabline'
 " Plug 'qpkorr/vim-bufkill'
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'mbbill/undotree'
 Plug 'rking/ag.vim'
 Plug 'junegunn/fzf.vim'
