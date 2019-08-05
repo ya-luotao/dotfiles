@@ -71,3 +71,6 @@ nnoremap <leader>undo :UndotreeToggle<CR>
 nnoremap <leader>p :FZF<CR>
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
+
+xmap ga <Plug>(EasyAlign)
+nmap go <Plug>(EasyAlign)
