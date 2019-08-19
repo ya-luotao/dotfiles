@@ -33,7 +33,9 @@ set splitright
 set list listchars=tab:»·,trail:·,nbsp:·
 
 set rtp+=/usr/local/opt/fzf
-
+ 
+let b:ale_linters = ['eslint']
+let b:ale_linters = {'javascript': ['eslint']}
 
 if filereadable(expand("~/.shared_cfg/vimrc.bundles"))
   source ~/.shared_cfg/vimrc.bundles
@@ -48,6 +50,7 @@ let g:tagbar_sort=0
 
 " https://stackoverflow.com/questions/53657545/nerdtree-g-before-folder-and-file-names-osx-terminal-vim
 let g:NERDTreeNodeDelimiter = "\u00a0"
+let NERDTreeShowHidden=1
 
 " let g:wakatime_PythonBinary = '/usr/bin/python'
 " let g:wakatime_PythonBinary = '/Users/luotao/.pyenv/shims/python'
