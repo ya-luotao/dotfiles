@@ -1,17 +1,12 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'ap/vim-buftabline'
-" Plug 'qpkorr/vim-bufkill'
 Plug 'scrooloose/nerdtree'
-" Plug 'w0rp/ale'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'mbbill/undotree'
 Plug 'rking/ag.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive' " Git Wrapper
-" Plug 'christoomey/vim-run-interactive'
-" Plug 'wincent/command-t'
-
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary' " Comment stuff out. Usage: `gcc`, `gc`, `gcap`, `:g/TODO/Commentary`
 Plug 'tpope/vim-unimpaired'
@@ -19,31 +14,16 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'junegunn/vim-easy-align'
 Plug 'jiangmiao/auto-pairs'
-" Plug 'junegunn/vim-easy-align'
-" Plug 'vimwiki/vimwiki'
 Plug 'arcticicestudio/nord-vim'
-
 Plug 'majutsushi/tagbar'
-" Plug 'mattn/emmet-vim'
-" Plug 'leafgarland/typescript-vim'
-" Plug 'SirVer/ultisnips'
-" Plug 'honza/vim-snippets'
-
+Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'wakatime/vim-wakatime'
 Plug 'vim-ruby/vim-ruby'
 Plug 'ervandew/supertab'
-" Plug 'tpope/vim-haml'
 Plug 'slim-template/vim-slim'
 Plug 'isRuslan/vim-es6'
 Plug 'hashivim/vim-terraform'
-" Plug 'skalnik/vim-vroom'
-
-" Plug 'kchmck/vim-coffee-script'
-
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'wall2flower/hardmode'
-
-" Plug 'nathangrigg/vim-beancount'
 
 call plug#end()

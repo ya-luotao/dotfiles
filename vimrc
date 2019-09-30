@@ -52,11 +52,6 @@ let g:tagbar_sort=0
 let g:NERDTreeNodeDelimiter = "\u00a0"
 let NERDTreeShowHidden=1
 
-" let g:wakatime_PythonBinary = '/usr/bin/python'
-" let g:wakatime_PythonBinary = '/Users/luotao/.pyenv/shims/python'
-
-" let g:hardmode = 1
-
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
@@ -74,6 +69,3 @@ nnoremap <leader>undo :UndotreeToggle<CR>
 nnoremap <leader>p :FZF<CR>
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
-
-xmap ga <Plug>(EasyAlign)
-nmap go <Plug>(EasyAlign)
