@@ -10,6 +10,7 @@ export EDITOR=vim
 export PROXYCHAINS_QUIET_MODE=1
 export ANSIBLE_HOSTS=/Users/luotao/ansible_hosts
 export PATH=$PATH:/Users/luotao/terraform
+export PATH=$PATH:/Users/luotao/bin
 
 # GIT_PROMTP_THEMT=Solarized
 
@@ -21,31 +22,15 @@ if [ -f ~/.bin/tmuxinator.bash ]; then
   source ~/.bin/tmuxinator.bash
 fi
 
-# source ~/Workspace/bash-wakatime/bash-wakatime.sh
-
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/luotao/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/Users/luotao/Downloads/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/luotao/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/luotao/Downloads/google-cloud-sdk/completion.bash.inc'; fi
-
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
-
-# eval "$(rbenv init -)"
+export PATH=/Users/luotao/.local/bin:/usr/local/bin:/usr/local/sbin:${PATH}
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-# export LDFLAGS="-L/usr/local/opt/openssl/lib"
-# export CPPFLAGS="-I/usr/local/opt/openssl/include"
-# export PATH="/usr/local/opt/openssl/bin:$PATH"
-# export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 eval "$(rbenv init -)"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;export all_proxy=socks5://127.0.0.1:6153

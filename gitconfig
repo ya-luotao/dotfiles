@@ -1,13 +1,13 @@
 [color]
-	ui = true
+  ui = true
 [user]
-	name = luotao
-	email = luotao.ruby@gmail.com
+  name = luotao
+  email = luotao.ruby@gmail.com
 [push]
-        default = current
+  default = current
 [pull]
-        default = current
+  default = current
 [credential]
-        helper = osxkeychain
+  helper = osxkeychain
 [core]
-	excludesfile = /Users/luotao/.gitignore_global
+  excludesfile = /Users/luotao/.gitignore_global
