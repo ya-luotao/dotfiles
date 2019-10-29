@@ -12,17 +12,23 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
-Plug 'ap/vim-buftabline'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'bronson/vim-trailing-whitespace'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'arcticicestudio/nord-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
+
+colorscheme nord
 
 let mapleader=","
 
 let g:javascript_plugin_flow=1
+
+let g:airline#extensions#tabline#enabled=1
 
 augroup javascript_folding
   au!
@@ -58,7 +64,6 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 
 set showcmd
-set cmdheight=2
 
 set encoding=utf-8
 
