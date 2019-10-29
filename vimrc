@@ -1,71 +1,40 @@
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
+set nocompatible
 
-let mapleader = ","
+call plug#begin('~/.vim/plugged')
 
-set backspace=2
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
+
+call plug#end()
+
+let mapleader=","
+
 set nobackup
 set nowritebackup
 set noswapfile
-set history=50
-set ruler
-set showcmd
-set incsearch
-set laststatus=2
-set autowrite
+set autoread
+set backspace=indent,eol,start
 
-set encoding=utf-8
-set number
-set relativenumber
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-set nojoinspaces
-
-" Open new split panes to right and bottom, which feels more natural
-set splitbelow
-set splitright
-
-" Display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
-
-set rtp+=/usr/local/opt/fzf
- 
-let b:ale_linters = ['eslint']
-let b:ale_linters = {'javascript': ['eslint']}
-
-if filereadable(expand("~/.shared_cfg/vimrc.bundles"))
-  source ~/.shared_cfg/vimrc.bundles
-end
-
-set background=dark
-colorscheme nord
-
-let g:airline_theme='bubblegum'
-
-let g:tagbar_sort=0
-
-" https://stackoverflow.com/questions/53657545/nerdtree-g-before-folder-and-file-names-osx-terminal-vim
-let g:NERDTreeNodeDelimiter = "\u00a0"
-let NERDTreeShowHidden=1
+set splitbelow " splitting a window will put the new window below the current one.
+set splitright " splitting a window will put the new window right of the current one.
 
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
 
-set hidden
-let g:buftabline_show=1
-let g:buftabline_numbers=1
+set showcmd
 
-nnoremap <leader><leader> <C-^>
-nnoremap <leader>a :Ag<space>
-nnoremap <leader>d :NERDTreeToggle<CR>
-nnoremap <leader>f :NERDTreeFind<CR>
-nnoremap <leader>tag :TagbarToggle<CR>
-nnoremap <leader>undo :UndotreeToggle<CR>
-nnoremap <leader>p :FZF<CR>
-nnoremap <C-N> :bnext<CR>
-nnoremap <C-P> :bprev<CR>
+set encoding=utf-8
+
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+
+autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2
+
+set incsearch " while typing a search commad, show where the pattern, as it was typed so far, matches. the matched string is highlighted.
+set ruler " show then line and column number of the cursor position, separated by a comma.
+set number " print the line number in front of each line.
+set relativenumber " show the line number relative to the line with the cursor in front of each line.
