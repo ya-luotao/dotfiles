@@ -9,6 +9,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
+Plug 'ap/vim-buftabline'
 
 call plug#end()
 
@@ -41,3 +42,19 @@ set incsearch " while typing a search commad, show where the pattern, as it was 
 set ruler " show then line and column number of the cursor position, separated by a comma.
 set number " print the line number in front of each line.
 set relativenumber " show the line number relative to the line with the cursor in front of each line.
+
+set hidden
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
+
+function s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1] =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+
+nnoremap <leader>d :NERDTreeToggle<CR>
