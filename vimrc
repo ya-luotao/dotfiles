@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'hail2u/vim-css3-syntax'
