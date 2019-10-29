@@ -5,18 +5,29 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'slim-template/vim-slim'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'hail2u/vim-css3-syntax'
+Plug 'pangloss/vim-javascript'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'ap/vim-buftabline'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'bronson/vim-trailing-whitespace'
 
 call plug#end()
 
 let mapleader=","
+
+let g:javascript_plugin_flow=1
+
+augroup javascript_folding
+  au!
+  au FileType javascript setlocal foldmethod=syntax
+augroup END
 
 set nobackup
 set nowritebackup
@@ -77,3 +88,7 @@ inoremap <silent><expr> <Tab>
       \ coc#refresh()
 
 nnoremap <leader>d :NERDTreeToggle<CR>
+nnoremap <leader>p :FZF<CR>
+
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
