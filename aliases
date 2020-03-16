@@ -5,6 +5,7 @@ alias fuckgfw='proxychains4'
 alias mux='tmuxiantor'
 alias mkdir='mkdir -p'
 alias gitlog='git log --format="%Cgreen%h%Creset %C(yellow)%aN%Creset: %s" --no-merges'
+alias vi='nvim'
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
