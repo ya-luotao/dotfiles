@@ -5,12 +5,20 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'slim-template/vim-slim'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'pangloss/vim-javascript'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
@@ -19,6 +27,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'mileszs/ack.vim'
 
 call plug#end()
 
@@ -26,14 +35,14 @@ colorscheme nord
 
 let mapleader=","
 
-let g:javascript_plugin_flow=1
+" let g:javascript_plugin_flow=1
 
 let g:airline#extensions#tabline#enabled=1
 
-augroup javascript_folding
-  au!
-  au FileType javascript setlocal foldmethod=syntax
-augroup END
+" augroup javascript_folding
+"   au!
+"   au FileType javascript setlocal foldmethod=syntax
+" augroup END
 
 set nobackup
 set nowritebackup
@@ -63,6 +72,8 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+let g:ackprg='ag --nogroup --nocolor --column'
+
 set showcmd
 
 set encoding=utf-8
@@ -72,6 +83,9 @@ set shiftwidth=2
 set softtabstop=2
 
 autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2
+autocmd FileType php setlocal shiftwidth=4 softtabstop=4
+
+let g:deoplete#enable_at_startup=1
 
 set incsearch " while typing a search commad, show where the pattern, as it was typed so far, matches. the matched string is highlighted.
 set ruler " show then line and column number of the cursor position, separated by a comma.
@@ -87,10 +101,10 @@ function s:check_back_space() abort
   return !col || getline('.')[col - 1] =~ '\s'
 endfunction
 
-inoremap <silent><expr> <Tab>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<Tab>" :
-      \ coc#refresh()
+" inoremap <silent><expr> <Tab>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<Tab>" :
+"       \ coc#refresh()
 
 nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>p :FZF<CR>
