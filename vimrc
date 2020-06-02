@@ -14,9 +14,9 @@ Plug 'pangloss/vim-javascript'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
+  " Plug 'Shougo/deoplete.nvim'
+  " Plug 'roxma/nvim-yarp'
+  " Plug 'roxma/vim-hug-neovim-rpc'
 endif
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
@@ -85,7 +85,9 @@ set softtabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2
 autocmd FileType php setlocal shiftwidth=4 softtabstop=4
 
-let g:deoplete#enable_at_startup=1
+if has('nvim')
+  let g:deoplete#enable_at_startup=1
+endif
 
 set incsearch " while typing a search commad, show where the pattern, as it was typed so far, matches. the matched string is highlighted.
 set ruler " show then line and column number of the cursor position, separated by a comma.
