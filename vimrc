@@ -83,7 +83,7 @@ set shiftwidth=2
 set softtabstop=2
 
 autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2
-autocmd FileType php setlocal shiftwidth=4 softtabstop=4
+autocmd FileType php setlocal shiftwidth=4 softtabstop=4 tabstop=4 noexpandtab
 
 if has('nvim')
   let g:deoplete#enable_at_startup=1
