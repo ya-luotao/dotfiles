@@ -9,6 +9,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'slim-template/vim-slim'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
+Plug 'nathangrigg/vim-beancount'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'pangloss/vim-javascript'
 if has('nvim')
@@ -28,6 +29,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mileszs/ack.vim'
+Plug 'mustache/vim-mustache-handlebars'
 
 call plug#end()
 
