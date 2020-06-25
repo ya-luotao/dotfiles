@@ -3,13 +3,12 @@
 ## Install
 
 ```
-git clone git@github.com:luotaoruby/dotfiles ~/Workspace/dotfiles
+git clone git@github.com:ya-luotao/dotfiles ~/Workspace/dotfiles
 ```
 
 Install rcm:
 
 ```
-brew tap thoughtbot/formulae
 brew install rcm
 ```
 
