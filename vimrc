@@ -12,6 +12,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'nathangrigg/vim-beancount'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'pangloss/vim-javascript'
+Plug 'hashivim/vim-terraform'
+Plug 'kchmck/vim-coffee-script'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
