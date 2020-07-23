@@ -14,6 +14,9 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'hashivim/vim-terraform'
 Plug 'kchmck/vim-coffee-script'
+Plug 'morhetz/gruvbox'
+" Plug 'cormacrelf/vim-colors-github'
+" Plug 'endel/vim-github-colorscheme'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -35,7 +38,9 @@ Plug 'mustache/vim-mustache-handlebars'
 
 call plug#end()
 
-colorscheme nord
+autocmd vimenter * colorscheme gruvbox
+" colorscheme github
+" colorscheme nord
 
 let mapleader=","
 
