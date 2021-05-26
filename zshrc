@@ -7,6 +7,9 @@ alias workspace="cd ~/Workspace"
 alias fara="cd ~/Workspace/Fara"
 alias dotfiles="cd ~/Workspace/dotfiles"
 
+export VISUAL=vim
+export editor=vim
+
 # rbenv
 eval "$(rbenv init -)"
 
