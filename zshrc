@@ -1,9 +1,5 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source ~/Workspace/zsh-git-prompt/zshrc.sh
-
-PROMPT='%B%m%~%b$(git_super_status) %# '
-
 # aliases
 alias ls="exa"
 alias ll="ls -lha"
